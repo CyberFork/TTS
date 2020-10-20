@@ -14,9 +14,9 @@
 
     <!-- vue.js -->
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- 生产环境版本，优化了尺寸和速度 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
     <!-- css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -40,7 +40,6 @@
         width: auto;
         height: auto;
         scrollbar-3d-light-color:#f00;
-        overflow: hidden;
     }
 </style>
 
@@ -48,13 +47,14 @@
 
     <!-- </body> onclick="location.reload();"> -->
 
-    <div id="app" style="position: absolute;width: 100%;height: 100%;margin-top: -2rem;">
+    <div id="app" style="position: absolute;left:30%; top:37%;width: 50%;">
         <header>
             <div class="card" style="
+            width: 35%;
             position: absolute;
+            top: -30%;
+            right: -30%;
             min-width: 230px;
-            right: 2rem;
-            margin-top: 5rem;
         ">
                 <div class="card-body">
                     <span>
@@ -71,7 +71,7 @@
 
         </header>
         <br>
-        <nav style="float: none;min-width: 600px;width: 50%;margin: auto;">
+        <nav style="float: none;min-width: 600px;">
             <div class="card">
                 <div class="card-body">
                     $Spirit living in contract @:<a
@@ -85,13 +85,17 @@
             </div>
 
         </nav>
+        <!-- <hr> -->
 
-        <div class="container" style="max-width: 50%;top: 30%;position: relative;">
+        <div class="container" style="max-width: 100%;">
             <div class="row">
-                <img src='./img/jlbg.png'/ style="position: absolute;left: -635px;top: -444px;z-index: -1;">
+
                 <div class="col-12">
                     <!-- $bento -->
-                    <section style="position: absolute;top: 20rem;left: -10rem;max-width: 22rem;"
+                    <section style="position: absolute;
+                    top: 109%;
+                    left: -66%;
+                    min-width: 230px;"
                 >
                         <div class="card">
                             <div class="card-body">
@@ -116,17 +120,23 @@
                                 </div>
                             </div>
                     </section>
-                    <!-- <hr> -->
+                    <hr>
                     <!-- $gov -->
                     <section>
                         <div class="card" style="min-width: 400px;">
                             <div class="card-body">
+                                <!-- <span style="width: 30%;" class='card-title'>{{GovHoeTokenName}}</span> -->
+                                <!-- Balance : {{gov_balance}} {{GovHoeTokenName}} in wallet
+                                <span style="float: right;" type="button" class="btn btn-success"
+                                    @click="approveGovToken()">Approve</span>
+                                <hr> -->
                                 <div style="display:inline-block;width: 100%;"><span class="card-text"> Create Spirit
-                                        </span>
+                                        {{gov_lockedF}} {{GovHoeTokenName}}</span>
                                     <!-- <span style="float: right;" class="btn btn-primary"
                                         @click='depositGovTokenToMine()'>Deposit to mine</span> -->
 
                                 </div>
+                                <hr>
                                 <div style="display:inline-block;width: 100%;">
                                     <input class="input-group-text"
                                         style="width: 100%;display: inline-flex;margin-bottom: 5px;" type="number"
@@ -163,8 +173,7 @@
 
 </body>
 <script>
-    // var SpiritAddress = "0xAcAcBa641166615732B70EDBa0f84DAef89677b7";
-    var SpiritAddress = "0x52cd186Bf3874BE5453947aCA7baaa3a1b6Af7f6";
+    var SpiritAddress = "0xAcAcBa641166615732B70EDBa0f84DAef89677b7";
     var firstContractHigh = 21454192;
     // self.setTimeout("app.RefreshFunds()", 1000);
     self.setInterval("app.getMySpiritNumber()", 10000);
