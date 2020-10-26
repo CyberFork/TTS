@@ -186,9 +186,7 @@
     });
     ethereum.on('accountsChanged', function (accounts) {
         // Time to reload your interface with accounts[0]!
-        //   app.RefreshFunds();
-        //   app.myGameDatas = [];
-        //   app.lobbyGameDatas = [];
+        app.refreshAll();
     })
     var STORAGE_KEY = 'Spirit';
     var DApp_Storage = {
